@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>WEB-технологии</title>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <link rel="stylesheet"href="Style1.css"/>
+   </head>
+   <body>
+      <header>
+         <img src="webLogo.png" alt="Изображение" height="150"/>
+         <h1>Основы WEB-технологий</h1>
+         <nav>
+            <ul class="menu">
+               <li><a href="index.html">Главная</a></li>
+               <li>
+                  <a href="2.web-tech.html">Web-технологии</a>
+                  <ul class="submenu">
+                     <li><a href="3.HTML5.html">HTML5</a></li>
+                     <li><a href="4.CSS3.html">CSS3</a></li>
+                     <li><a href="5.JS.html">JavaScript</a></li>
+                  </ul>
+               </li>
+               <li><a href="6.Calc.html">Калькулятор</a></li>
+               <li><a href="7.Test.html">Тест</a></li>
+            </ul>
+         </nav>
+      </header>
+      <div>
+        <form name="test">
+      1 Какой тег предназначен для создания ссылок:<br />
+      <input name="knopka" type="radio" id="rad1"/>&lt;a&gt;<br />
+      <input name="knopka" type="radio"/>&lt;a /&gt;<br />
+      <input name="knopka" type="radio"/>&lt;ref&gt;<br />
+      <input name="knopka" type="radio"/>&lt;ref /&gt;<br />
+      2 Какой тег предназначен для создания нумерованного списка:<br />
+      <input name="knopka1" type="radio"/>&lt;li&gt;<br />
+      <input name="knopka1" type="radio"/>&lt;dl&gt;<br />
+      <input name="knopka1" type="radio" id="rad2"/>&lt;ol&gt;<br />
+      <input name="knopka1" type="radio"/>&lt;ul&gt;<br />
+      3 Какой тег предназначен для передачи служебной информации браузеру:<br />
+      <input name="knopka2" type="radio"/>&lt;info&gt;<br />
+      <input name="knopka2" type="radio"/>&lt;info /&gt;<br />
+      <input name="knopka2" type="radio" id="rad3"/>&lt;meta&gt;<br />
+      <input name="knopka2" type="radio"/>&lt;meta /&gt;<br />
+      4 Какие теги используются при создании таблицы:<br />
+      <input type="checkbox"/>&lt;bodyt&gt;<br />
+      <input type="checkbox" id="rad4"/>&lt;td&gt;<br />
+      <input type="checkbox"/>&lt;groupcol&gt;<br />
+      <input type="checkbox"/>&lt;col /&gt;<br />
+      5 Какие атрибуты используются при создании форм:<br />
+      <input type="checkbox"/>autocomplete<br />
+      <input type="checkbox"id="rad5"/>action<br />
+      <input type="checkbox"/>charset<br />
+      <input type="checkbox"/>validate<br />
+      <p><input class="result" type="button" name="button" onclick=" CheckRad()" value="Результат" /></p>
+	  <script>
+	  function CheckRad(){
+		var count = 0;
+			if(document.getElementById('rad1').checked) {
+				count+=1;
+			}
+			if(document.getElementById('rad2').checked) {
+				count+=1;
+			}
+			 
+			if(document.getElementById('rad3').checked) {
+				count+=1;
+			}
+			if(document.getElementById('rad4').checked) {
+				count+=1;
+			}
+			if(document.getElementById('rad5').checked) {
+				count+=1;
+			}
+			
+			var quest;
+			if(count >4){
+				quest = "вопросов";
+			} else {
+				quest = "вопроса";
+			}
+			
+			 alert("Вы ответили правильно на "+count+" "+quest+"!");
+		}
+	  </script>
+        </form>
+        </div>
+      <footer>
+            <address><a href="http://mail@mail">Пишите: mail@mail</a></address>
+            &copy; Фамилия И.О.,год
+      </footer>
+   </body>
+</html>
